@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Jockey+One&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Outfit:wght@100..900&family=Playfair+Display:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", system-ui;
+  font-weight: 400;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 52, 52);
+    }
+    .buildResume{
+        /* width: 100%;
+        height: 1100px; */
+        align-items: center;
+display: flex;
+justify-content: center;
+    }
+    .show {
+        text-align: center;
+        font-size: 35px;
+        font-style:oblique;
+margin-top: 15px;
+
+    }
+.resume{
+    /* display: none; */
+width: 660px;
+/* height: 100%; */
+border: 2px solid black;
+border-radius: 30px;
+overflow: hidden;
+box-shadow: 2px 2px 10px 3px ;
+margin: 10px;}
+.profilePicture img{
+width: 150px;
+border-radius: 80px;
+}
+
+.main{
+    /* width: 100%; */
+    display: grid;
+    gap: 40px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+ul li{
+    list-style: none;
+    font-size: 13px;
+}
+.resume h1{
+    text-align: center;
+    font-weight: 600;
+
+}
+.personalInformation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactDetails{
+    font-size: 20px;
+    text-align: center;
+}
+.contactDetails .name{
+    color: rgb(146, 146, 118);
+font-size: 38px;
+font-weight: 500;
+}
+.contactDetails .field{
+    font-size: 20px;
+    color: rgb(92, 115, 116);
+    font-weight: 500;
+}
+.contactDetails .contact{
+    font-size: 10px;
+    color: rgb(92, 115, 116);
+}
+.education{
+padding: 10px;
+    background-color: rgb(222, 217, 211);
+}
+.education h2{
+    font-size: 35px;
+}
+.education span img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.education span{
+    display: flex;
+    justify-content: space-between;
+}
+.skills span img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.skills span{
+    display: flex;
+    justify-content: space-between;
+}
+.workExperience span img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.workExperience span{
+    display: flex;
+    justify-content: space-between;
+}
+.contact span img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.contact span{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills{
+padding: 10px;
+    background-color: rgb(204, 201, 197);
+   
+}
+.skills h2{
+    font-size: 35px;
+}
+.workExperience{
+padding: 10px;
+    background-color: rgb(224, 223, 221);
+   
+}
+.workExperience h2{
+    font-size: 35px;
+}
+.contact{
+padding: 10px;
+    background-color: rgb(241, 232, 214);
+   
+}
+.contact h2{
+    font-size: 35px;
+}
+.form{
+    background-color: rgb(72, 56, 56);
+    width: 650px;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+.heading h1{
+text-align: center;
+font-size: 35px;
+font-style:initial;
+}
+
+.PersonalInfo{
+    /* background-color: #fff; */
+    height: 90px;
+    padding: 5px;
+}
+.PersonalInfo h2{
+    margin-top: 15px;
+font-style: italic;
+}
+.PersonalInfo span input{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 30px;
+}
+.Education{
+    height: 90px;
+    padding: 5px;
+}
+.Education h2{
+    margin-top: 10px;
+    font-style: italic;
+    
+}
+.Education span input{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 30px;
+}
+.Skills{
+    height: 90px;
+    padding: 5px;
+}
+.Skills h2{
+    margin-top: 10px;
+    font-style: italic;
+    
+}
+.Skills span input{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 30px;
+}
+.Experience{
+    height: 90px;
+    padding: 5px;
+}
+.Experience h2{
+    margin-top: 10px;
+    font-style: italic;
+    
+}
+.Experience span input{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+.btn {
+    /* background-color: #fff; */
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.btn button{
+    border-radius: 20px;
+width: 190px;
+height: 35px;
+background: transparent;
+      box-shadow: 2px 2px 5px 2px rgb(66, 33, 33) ;
+border: none;
+margin-left: 12px;
+cursor: pointer;
+
+}
+span input{
+    border-radius: 15px;
+    background:transparent;
+    margin: 10px;
+    box-shadow: 2px 2px 5px 2px rgb(66, 33, 33) ;
+border: none;
+padding: 2px;
+}
+span input:hover{
+    background-color: #6d3d3d;
+    box-shadow: 2px 2px 5px 2px rgb(66, 33, 33) ;
+
+}
+button:hover{
+    background-color: #6d3d3d;
+    box-shadow:none ;
+}
+span input::placeholder{
+padding: 10px;}
+
+.btn2{
+    /* background-color: #fff; */
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.btn2 button{
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 1px 1px 10px 2px;
+    height: 35px;
+    width: 200px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color: black;
+    color: #fdfcfc;
+    cursor: pointer;
+}
+.uniqueUrl{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    margin-bottom: 10px;
+    top: 0;
+    text-align: center;
+}
+.uniqueUrl a{
+    color: darkgray;
+    text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+   
+    .PersonalInfo span input{
+        width:150px ;
+        
+    }
+   
+}
+@media screen and (max-width: 700px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 500px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+    }
+    .resume{
+        /* display: none; */
+    width: 510px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+}
+    
+}
+
+@media screen and (max-width: 540px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 450px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+        margin-left: 30px;
+
+    }
+    .resume{
+        /* display: none; */
+    width: 460px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+    margin-left: 30px;
+}
+.PersonalInfo span input{
+    width:130px ;
+    
+}
+}
+@media screen and (max-width: 460px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 380px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+
+    }
+    .resume{
+        /* display: none; */
+    width: 390px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+}
+
+    
+}
+@media screen and (max-width: 420px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 340px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+
+    }
+    .resume{
+        /* display: none; */
+    width: 350px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+}
+
+    
+}
+@media screen and (max-width: 380px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 310px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+
+    }
+    .resume{
+        /* display: none; */
+    width: 320px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+}
+
+    
+}
+@media screen and (max-width: 420px) {
+    .form{
+        background-color: rgb(72, 56, 56);
+        width: 340px;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 20px;
+
+    }
+    .resume{
+        /* display: none; */
+    width: 350px;
+    /* height: 100%; */
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px 3px ;
+    margin: 10px;
+}
+
+    
+}
+@media screen and (max-width: 500px) {
+    
+    .PersonalInfo{
+        /* background-color: #fff; */
+        /* height: 90px;
+        padding: 5px; */
+        display: grid;
+        height: 140px;
+    }
+    .contactDetails .name{
+        color: rgb(146, 146, 118);
+    font-size: 30px;
+    font-weight: 500;
+    }
+}
+@media screen and (max-width: 430px) {
+    
+    .contactDetails .name{
+        color: rgb(146, 146, 118);
+    font-size: 30px;
+    font-weight: 500;
+    }
+    .contactDetails .field{
+        font-size: 18px;
+        color: rgb(92, 115, 116);
+        font-weight: 500;
+    }
+    .contactDetails .contact{
+        font-size: 10px;
+        color: rgb(92, 115, 116);
+    }
+    .profilePicture img{
+        width: 120px;
+        height: 120px;
+        border-radius: 80px;
+        }
+    .btn {
+    /* background-color: #fff; */
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+   
+}
+@media screen and (max-width: 385px) {
+    
+    .btn {
+    /* background-color: #fff; */
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .contactDetails .name{
+        color: rgb(146, 146, 118);
+    font-size: 30px;
+    font-weight: 500;
+    }
+    .contactDetails .field{
+        font-size: 16px;
+        color: rgb(92, 115, 116);
+        font-weight: 500;
+    }
+    .contactDetails .contact{
+        font-size: 9px;
+        color: rgb(92, 115, 116);
+    }
+}
