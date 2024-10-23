@@ -40,36 +40,76 @@ let resGmail = document.getElementById("resGmail") as HTMLElement
 
 let downloadBtn = document.getElementById("downloadBtn") as HTMLButtonElement
 let resumeLink = document.querySelector(".uniqueUrl") as HTMLParagraphElement;
+let buildForm = document.querySelector("#buildForm") as HTMLElement
 
-
-// button.addEventListener("click", (event)=>{
-//     event.preventDefault(); // Prevents the form from submitting and reloading the page
-    
-    
-//     // Scroll smoothly to the resume section
-//   resume.scrollIntoView({ behavior: "smooth" });
-//   const username = (document.getElementById('ConName') as HTMLInputElement).value;
-
-//   const uniqueUrl = `https://${username}.vercel.app/resume`;
-//   resumeLink.innerHTML = `Share your resume: <a href="${uniqueUrl}" target="_blank">${uniqueUrl}</a>`;
-
-// })
 
 form.addEventListener('submit', (event: Event) => {
     event.preventDefault();
 
-  // Scroll smoothly to the resume section
-  resume.scrollIntoView({ behavior: "smooth" });
-  const username = (document.getElementById('ConName') as HTMLInputElement).value;
+    // Scroll smoothly to the resume section
+    resume.scrollIntoView({ behavior: "smooth" });
 
-  const uniqueUrl = `https://${username}.vercel.app/resume`;
-  resumeLink.innerHTML = `Share your resume: <a href="${uniqueUrl}" target="_blank">${uniqueUrl}</a>`;
+    // Get form values
+    const name = conName.value;
+    const education = conEdu.value;
+    const skills = conSkills.value;
+    const experience = conExp.value;
+    const email = conGmail.value;
+
+    // Update resume preview
+    resName.textContent = name;
+    resEdu.textContent = education;
+    resSkills.textContent = skills;
+    resExp.textContent = experience;
+    resGmail.textContent = email;
+
+    // Create sharable URL with query parameters
+    const urlParams = new URLSearchParams({
+        name,
+        education,
+        skills,
+        experience,
+        email,
+    });
+
+    const sharableUrl = `${window.location.origin}${window.location.pathname}?${urlParams.toString()}`;
+    resumeLink.innerHTML = `Share your resume: <a href="${sharableUrl}" target="_blank">${sharableUrl}</a>`;
 
 
     if (!conName || !conEdu || !conExp || !conGmail || !conSkills || !skills) {
-        alert("Please fill out all fields.");
-        return;
-    }
+                 alert("Please fill out all fields.");
+                 return;
+             }
+
+});
+
+
+// On page load, populate form with query parameters if available
+window.addEventListener('load', () => {
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const name = urlParams.get('name') || '';
+    const education = urlParams.get('education') || '';
+    const skills = urlParams.get('skills') || '';
+    const experience = urlParams.get('experience') || '';
+    const email = urlParams.get('email') || '';
+
+    // Populate form
+    conName.value = name;
+    conEdu.value = education;
+    conSkills.value = skills;
+    conExp.value = experience;
+    conGmail.value = email;
+
+    // Populate resume preview
+    resName.textContent = name;
+    resEdu.textContent = education;
+    resSkills.textContent = skills;
+    resExp.textContent = experience;
+    resGmail.textContent = email;
+
+
 });
 
 conName.addEventListener("keyup",()=>{
